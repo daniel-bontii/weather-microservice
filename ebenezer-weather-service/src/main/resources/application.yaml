@@ -11,7 +11,7 @@ server:
   port: 8085
 
 openWeather:
-  baseUrl: https://api.openweather.org/data/2.5/weather
+  baseUrl: ${baseUrl}
 
 app:
   id: ${appid}
