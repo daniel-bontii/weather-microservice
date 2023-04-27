@@ -1,8 +1,9 @@
 package com.ebenezer.weather.controller;
 
-import com.ebenezer.weather.client.OpenWeatherClient;
+import com.ebenezer.weather.model.WeatherResponse;
+import com.ebenezer.weather.service.WeatherService;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,14 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class WeatherController {
 
-    @Value("${app.id}")
-    private String api_key;
-
-    private final OpenWeatherClient openWeatherClient;
+    private final WeatherService service;
 
     @GetMapping("/weather")
-    public String getWeather(@RequestParam String city){
-        System.out.println(openWeatherClient.getWeather(city, api_key).getBody());
-        return "Hello";
+    public WeatherResponse getWeather(@RequestParam String city) throws JsonProcessingException {
+
+        return service.getWeather(city);
     }
 }
