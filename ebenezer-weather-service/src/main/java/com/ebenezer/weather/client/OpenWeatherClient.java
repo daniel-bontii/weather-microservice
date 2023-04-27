@@ -9,5 +9,5 @@ import org.springframework.web.service.annotation.HttpExchange;
 public interface OpenWeatherClient {
 
     @GetExchange()
-    ResponseEntity<Object> getWeather(@RequestParam(name = "q") String city, @RequestParam(name = "appid") String api_key);
+    ResponseEntity<String> getWeather(@RequestParam(name = "q") String city, @RequestParam(name = "appid") String api_key);
 }
