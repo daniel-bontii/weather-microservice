@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: ebenezer-weather-service
+  cloud:
+    config:
+      enabled: false
+    discovery:
+      enabled: false
+
+server:
+  port: 8085
+
+openWeather:
+  baseUrl: ${baseUrl}
+
+app:
+  id: ${appid}
