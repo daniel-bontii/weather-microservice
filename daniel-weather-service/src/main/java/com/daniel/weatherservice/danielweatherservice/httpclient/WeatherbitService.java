@@ -9,4 +9,7 @@ public interface WeatherbitService {
     @GetExchange
     WeatherConditions getWeatherByCity(@RequestParam String city);
 
+    @GetExchange
+    WeatherConditions getWeatherByZip(@RequestParam(name = "postal_code") int zip);
+
 }
