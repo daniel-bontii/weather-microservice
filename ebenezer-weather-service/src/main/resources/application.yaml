@@ -14,6 +14,7 @@ openWeather:
 app:
   id: ${appid}
 
+
 eureka:
   client:
     serviceUrl:
