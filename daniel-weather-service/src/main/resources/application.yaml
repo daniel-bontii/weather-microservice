@@ -4,3 +4,7 @@ spring:
       enabled: false
     discovery:
       enabled: false
+
+weatherstack:
+  access:
+    key: ${weatherstackaccess}
