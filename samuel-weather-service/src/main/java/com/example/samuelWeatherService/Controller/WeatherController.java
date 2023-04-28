@@ -8,7 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController()
-@RequestMapping("/api/v1/weather")
+@RequestMapping("/ninja-weather")
 @RequiredArgsConstructor
 public class WeatherController {
     private final WeatherServiceImpl weatherServiceImpl;
