@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+<<<<<<< HEAD
+      <module fileurl="file://$PROJECT_DIR$/ebenezer-weather-service/weather.iml" filepath="$PROJECT_DIR$/ebenezer-weather-service/weather.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/weather-microservice.iml" filepath="$PROJECT_DIR$/.idea/weather-microservice.iml" />
+>>>>>>> f11e0585b4a49196a6fe6c65f0388cf4f8800e58
+    </modules>
+  </component>
+</project>
