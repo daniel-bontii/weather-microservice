@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    config:
+      enabled: false
+    discovery:
+      enabled: false
+  application:
+    name: daniel-service
+
+weatherbit:
+  access:
+    key: ${weatherbitaccess}
+
