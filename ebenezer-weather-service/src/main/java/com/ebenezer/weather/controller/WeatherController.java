@@ -14,7 +14,7 @@ public class WeatherController {
 
     private final WeatherService service;
 
-    @GetMapping("/weather")
+    @GetMapping("/openweather")
     public WeatherResponse getWeather(@RequestParam String city) throws JsonProcessingException {
 
         return service.getWeather(city);

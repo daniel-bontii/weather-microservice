@@ -13,7 +13,7 @@ public class WeatherController {
 
     private final WeatherService weatherService;
 
-    @GetMapping("/api/v1/weather-by-city")
+    @GetMapping("/weatherbit")
     public WeatherConditionsDto getWeatherByCity(@RequestParam String city){
         return weatherService.getWeatherByCity(city);
     }

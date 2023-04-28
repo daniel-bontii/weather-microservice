@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    config:
+      enabled: false
+    gateway:
+      routes:
+        - id: ebenezer-service
+          uri: lb://ebenezer-service
+          predicates:
+            - Path=/openweather/**
+        - id: daniel-service
+          uri: lb://daniel-service
+          predicates:
+            - Path=/weatherbit/**
+        - id: samuel-service
+          uri: lb://samuel-service
+          predicates:
+            - Path=/ninja-weather/**
+
+server:
+  port: 8060
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+

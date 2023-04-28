@@ -2,9 +2,15 @@ spring:
   cloud:
     config:
       enabled: false
-    discovery:
-      enabled: false
+  application:
+    name: daniel-service
 
 weatherbit:
   access:
     key: ${weatherbitaccess}
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
