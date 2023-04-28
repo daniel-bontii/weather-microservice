@@ -4,3 +4,7 @@ spring:
       enabled: false
     discovery:
       enabled: false
+
+weatherbit:
+  access:
+    key: ${weatherbitaccess}
