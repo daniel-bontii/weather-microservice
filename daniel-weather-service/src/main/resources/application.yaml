@@ -5,6 +5,6 @@ spring:
     discovery:
       enabled: false
 
-weatherstack:
+weatherbit:
   access:
-    key: ${weatherstackaccess}
+    key: ${weatherbitaccess}

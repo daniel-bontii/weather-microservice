@@ -8,15 +8,15 @@ import org.springframework.web.service.invoker.HttpServiceProxyFactory;
 
 @org.springframework.context.annotation.Configuration
 public class Configuration {
-    @Value("${weatherstack.access.key}")
+    @Value("${weatherbit.access.key}")
     private String accessKey;
 
     @Bean
-    WeatherService weatherService() {
-        String baseUrl = "https://api.weatherstack.com/current?access_key=" + accessKey;
+    WeatherbitService weatherService() {
+        String baseUrl = "https://api.weatherbit.io/v2.0/current?key=" + accessKey;
         WebClient webClient = WebClient.builder().baseUrl(baseUrl).build();
         HttpServiceProxyFactory factory = HttpServiceProxyFactory.builder(WebClientAdapter.forClient(webClient)).build();
-        return factory.createClient(WeatherService.class);
+        return factory.createClient(WeatherbitService.class);
     }
 
 }
