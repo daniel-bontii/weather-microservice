@@ -11,3 +11,5 @@ spring:
       enabled: false
     discovery:
       enabled: false
+  application:
+    name: samuel-service
