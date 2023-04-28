@@ -5,7 +5,9 @@ import com.daniel.weatherservice.danielweatherservice.httpclient.WeatherbitServi
 import com.daniel.weatherservice.danielweatherservice.model.Data;
 import com.daniel.weatherservice.danielweatherservice.model.WeatherConditions;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 @RequiredArgsConstructor
 @Service
@@ -21,7 +23,9 @@ public class WeatherServiceImpl implements WeatherService {
     @Override
     public WeatherConditionsDto getWeatherByCity(String city) {
 
-        //Todo: Validate city
+        if(city.isEmpty() || city.isBlank()) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "invalid city");
+        }
         WeatherConditions conditions = weatherbitService.getWeatherByCity(city);
         return ConditionsToWeatherConditionsDto(conditions);
 
@@ -30,7 +34,9 @@ public class WeatherServiceImpl implements WeatherService {
     @Override
     public WeatherConditionsDto getWeatherByZip(int zip) {
 
-        //Todo: Validate zip
+        if(zip < 1) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "invalid zip");
+        }
         WeatherConditions conditions = weatherbitService.getWeatherByZip(zip);
         return ConditionsToWeatherConditionsDto(conditions);
     }
