@@ -1,0 +1,14 @@
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/daniel-bontii/weather-service-config-repo.git
+
+server:
+  port: 8888
+
+
