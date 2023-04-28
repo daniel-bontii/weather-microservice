@@ -1,6 +1,6 @@
 weather:
   url: https://weather-by-api-ninjas.p.rapidapi.com/v1/weather
-  apikey: 5d13c40123msh0c52c6c68b09423p15eb89jsnf45cdb709bbd
+  apikey: ${api_key}
   apiHost: X-RapidAPI-Key
 
 server:
