@@ -13,12 +13,12 @@ public class WeatherController {
 
     private final WeatherService weatherService;
 
-    @GetMapping("/weatherbit")
+    @GetMapping("/weatherbit/city")
     public WeatherConditionsDto getWeatherByCity(@RequestParam String city){
         return weatherService.getWeatherByCity(city);
     }
 
-    @GetMapping("/api/v1/weather-by-zip")
+    @GetMapping("/weatherbit/zip")
     public WeatherConditionsDto getWeatherByZip(@RequestParam int zip){
         return weatherService.getWeatherByZip(zip);
     }
