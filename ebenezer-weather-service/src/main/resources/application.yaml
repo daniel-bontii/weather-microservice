@@ -1,18 +1,13 @@
 spring:
   application:
     name: ebenezer-service
-  cloud:
-    config:
-      enabled: false
+
+  config:
+    import: optional:configserver:http://localhost:8888
 
 server:
   port: 8085
 
-openWeather:
-  baseUrl: https://api.openweathermap.org/data/2.5/weather
-
-app:
-  id: ${appid}
 
 
 eureka:

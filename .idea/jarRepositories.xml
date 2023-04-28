@@ -31,5 +31,10 @@
       <option name="name" value="vaadin-addons" />
       <option name="url" value="http://maven.vaadin.com/vaadin-addons/" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="HERE_PLATFORM_REPO" />
+      <option name="name" value="HERE Platform Repository" />
+      <option name="url" value="https://repo.platform.here.com/artifactory/open-location-platform/" />
+    </remote-repository>
   </component>
 </project>
